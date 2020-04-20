@@ -1,0 +1,73 @@
+.menu {
+    z-index: 10;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    // background-color: $black-o-65;
+    color: $white;
+    position: fixed;
+    opacity: 0;
+    transform-origin: 0 0;
+    transform: scale(0) skew(90deg) translateX(-100px);
+    pointer-events: none;
+    transition: opacity 0.75s ease-in-out,
+        transform 0.75s ease-in-out;
+
+    &--is-open {
+        opacity: 1;
+        transform: scale(1) skew(0deg) translateX(0px);
+        pointer-events: all;
+        transition: opacity 0.75s ease-in-out,
+            transform 0.75s ease-in-out;
+    }
+
+    &__content {
+        @include thick-font;
+        padding: 50px 25px;
+        width: 100%;
+        max-width: 1200px;
+        display: flex;
+        flex-direction: column;
+        text-shadow: 0px 4px 8px $black;
+
+        ul {
+            padding-left: 75px;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            color: $white;
+            align-items: center;
+            position: relative;
+
+            &:before {
+                content: "";
+                position: absolute;
+                left: -55px;
+                background-size: cover;
+                width: 35px;
+                height: 35px;
+            }
+        }
+
+        li:first-child a:before {
+            background-image: url('https://res.cloudinary.com/dmqwm8tlw/image/upload/PortfolioSite/images/deviantArt.png');
+        }
+
+        li:nth-child(2) a:before {
+            background-image: url('https://res.cloudinary.com/dmqwm8tlw/image/upload/PortfolioSite/images/instagram.png');
+        }
+
+        li:last-child a:before {
+            background-image: url('https://res.cloudinary.com/dmqwm8tlw/image/upload/RavenClothing/mail.svg');
+        }
+    }
+}

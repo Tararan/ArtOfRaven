@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<head>
+    ${require('./partials/_head.html')}
+</head>
+
+<body>
+    <span id="responseContainer" class="hidden"></span>
+    <nav class="nav">
+        <div class="nav__menu-btn">
+            <span class="link__text">menu</span>
+        </div>
+    </nav>
+    <section class="menu">
+        <div class="menu__content">
+            <p>
+                If you want more, check me out on deviantart and instagram linked below.
+                <br />
+                <br />
+                If you want to work with me, your best bet is to contact me on instagram or via e-mail:
+            </p>
+            <ul>
+                <li> <span rel="noopener noreferer" target="_blank" class="link__text"
+                        attr-href="https://www.deviantart.com/infamous-raven/gallery">
+                        DeviantArt
+                    </span></li>
+                <li> <span rel="noopener noreferer" target="_blank" class="link__text"
+                        attr-href="https://www.instagram.com/artofraven/">
+                        Instagram
+                    </span></li>
+                <li> <span rel="noopener noreferer" target="_blank" class="link__text" attr-href="mail@artofraven.com">
+                        Mail
+                    </span></li>
+            </ul>
+        </div>
+    </section>
+    <canvas class="canvas canvas--menu" id="menuDecoration"></canvas>
+    <span id="target"></span>
+    <main class="paperscript">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="swiper-slide__img">
+                        <img crossOrigin="anonymous" class="img"
+                            src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/2c4c2845-cc82-4f0b-b4ca-06bbe9c29a9f/dbkqot2-8976c9bf-cce1-4a2d-b2b7-5e0471e12e5d.png/v1/fill/w_1024,h_692,strp/chester_bennington__or_on_inner_demons__by_infamous_raven_dbkqot2-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NjkyIiwicGF0aCI6IlwvZlwvMmM0YzI4NDUtY2M4Mi00ZjBiLWI0Y2EtMDZiYmU5YzI5YTlmXC9kYmtxb3QyLTg5NzZjOWJmLWNjZTEtNGEyZC1iMmI3LTVlMDQ3MWUxMmU1ZC5wbmciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.NxRFokQLNcTXPWIahGsKM8OyzD8lRjh1ciBnhnY1KYA"
+                            alt='' />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <canvas current="img-0" class="canvas canvas--bg canvas--inactive" resize="true" id="active"></canvas>
+    <canvas current="img-1" class="canvas canvas--bg canvas--inactive" resize="true" id="next"></canvas>
+</body>
+
+</html>

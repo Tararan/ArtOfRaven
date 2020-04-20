@@ -1,0 +1,79 @@
+.book {
+    position: absolute;
+    left: 25vw;
+    top: 3vh;
+
+    &__cover {
+        width: calc(100% - 80px);
+        margin: 40px;
+        height: 200px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-flow: column wrap;
+        padding: 20px;
+        border: 1px solid $accadia;
+        backdrop-filter: blur(20px);
+    }
+
+    &__cover-title {
+        font-size: 30px;
+        margin: 0;
+    }
+
+    &__cover-subtitle {
+        font-size: 20px;
+        margin: 0;
+    }
+
+    &__cover-description {
+        line-height: 1.25;
+        font-size: 15px;
+        margin: 0;
+    }
+
+    #flipbook {
+        width: 1200px;
+        height: 900px;
+        transition: margin 0.25s ease-in-out;
+    }
+
+    #flipbook .page {
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 400px;
+        height: 300px;
+        background-color: white;
+        line-height: 300px;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    #flipbook .page-wrapper {
+        perspective: 2000px;
+    }
+
+    #flipbook .hard {
+        background-color: #ccc !important;
+        color: #333;
+        box-shadow: inset 0 0 5px #666;
+        font-weight: bold;
+        box-shadow: 0 0 15px 10px rgba(0, 0, 0, 0.55);
+    }
+
+    #flipbook .page.odd,
+    #flipbook .hard.odd {
+        // background-image: linear-gradient(right, #FFF 95%, #C4C4C4 100%);
+        // box-shadow: inset 0 10px 15px #000;
+        box-shadow: inset 5px 0px 20px #000 !important;
+    }
+
+
+
+    #flipbook .page.even {
+        // background-image: linear-gradient(left, #fff 95%, #dadada 100%);
+        // box-shadow: inset 0 10px 15px #000;
+        box-shadow: inset -5px 0px 20px #000 !important;
+    }
+}

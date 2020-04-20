@@ -1,0 +1,57 @@
+.paperscript {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    height: 100%;
+}
+
+.canvas,
+.color {
+    width: 700px;
+}
+
+.canvas {
+    opacity: 1;
+    transition: opacity 2s ease-in-out;
+}
+
+canvas[resize] {
+    width: 101vw;
+    height: 100vh;
+}
+
+.canvas--inactive {
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+.canvas {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    background-color: $black;
+    // filter: blur(75px) saturate(1.5);
+}
+
+.canvas--menu {
+    transform-origin: 10px 0;
+    transform: scale(1);
+    filter: blur(0px);
+    z-index: 5;
+    background-color: transparent;
+    pointer-events: none;
+    transition: transform 0.75s ease-in-out,
+        blur 0.75s ease-in-out;
+}
+
+.canvas--open {
+    transform: scale(30);
+    filter: blur(0px);
+    transition: transform 1.25s ease-in-out,
+        blur 0.25s ease-in-out;
+}

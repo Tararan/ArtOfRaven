@@ -1,0 +1,37 @@
+.link {
+    position: relative;
+    cursor: pointer;
+    display: inline-flex;
+
+    .nav__menu-btn & {
+        color: $white;
+    }
+
+    &,
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+    }
+
+    &__effect {
+        white-space: nowrap;
+        position: absolute;
+        left: 0;
+        overflow: hidden;
+        width: 0;
+        transition: width 0.75s ease-in-out;
+
+        .link:hover & {
+            width: 100%;
+            transition: width 0.55s ease-in-out;
+        }
+
+        &,
+        &:hover,
+        &:focus,
+        &:active {
+            color: $theme-color;
+            text-decoration: underline;
+        }
+    }
+}
